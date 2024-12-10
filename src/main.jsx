@@ -16,7 +16,7 @@ import Post from './pages/Post.jsx'
 
 
 
-import AuthLayout from './components/AuthLayout.jsx'
+import Protected from './components/AuthLayout.jsx'
 
 const router = createBrowserRouter ([
   {
@@ -30,49 +30,49 @@ const router = createBrowserRouter ([
     {
       path: "/login",
       element: (
-        <AuthLayout authentication={false}>
+        <Protected authentication={false}>
           <Login/>
-        </AuthLayout>
+        </Protected>
       )
     },
     {
       path: "/signup",
       element: (
-        <AuthLayout authentication={false}>
+        <Protected authentication={false}>
           <Signup/>
-        </AuthLayout>
+        </Protected>
       )
     },
     {
       path: "/all-post",
       element: (
-        <AuthLayout authentication={true}>
+        <Protected authentication={true}>
           <AllPost/>
-        </AuthLayout>
+        </Protected>
       )
     },
     {
       path: "/add-post",
       element: (
-        <AuthLayout authentication={true}>
+        <Protected authentication={true}>
           <AddPost/>
-        </AuthLayout>
+        </Protected>
       )
     },
     {
       path: "/edit-post/:slug",
       element: (
-        <AuthLayout authentication={true}>
+        <Protected authentication={true}>
           <EditPost/>
-        </AuthLayout>
+        </Protected>
       )
     },
     {
       path: "/post/:slug",
       element: (
-        <AuthLayout authentication={true}>
+        <Protected authentication={true}>
           <Post/>
-        </AuthLayout>
+        </Protected>
       )
     }
     ]
