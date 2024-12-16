@@ -16,11 +16,11 @@ function RTE({
         </label>
         }
         <Controller
-        name = {name || "conternt"}
+        name = {name || "content"}
         control = {control}
         render = {({field:{onChange}}) => (
             <Editor
-            initialVAlue = {defaultValue}
+            initialValue = {defaultValue}
             init={{
                 branding: false,
                 height:500,
@@ -34,7 +34,7 @@ function RTE({
                   'bold italic forecolor | alignleft aligncenter ' +
                   'alignright alignjustify | bullist numlist outdent indent | ' +
                   'removeformat | help',
-                content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                content_style: "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }"
               }}
               onEditorChange={onChange}
             />

@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 export default function PostForm({post}) {
-  const {register, handleSubmit, watch, setValue, control, getValues} = usseForm({
+  const {register, handleSubmit, watch, setValue, control, getValues} = useForm({
     defaultValues: {
       title: post?.title || "",
       slug: post?.slug || "",

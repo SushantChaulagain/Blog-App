@@ -69,7 +69,7 @@ export class Service {
     }
     //storage service 
 
-    async uploadFIle(file){
+    async uploadFile(file){
         try {
             return await this.bucket.createFile(
                 conf.appwriteBucketId, 
@@ -81,7 +81,7 @@ export class Service {
             return false
         }
     }
-    async deleteFIle(fileId){
+    async deleteFile(fileId){
         try {
             await this.bucket.deleteFile(
                 conf.appwriteBucketId, 
@@ -93,7 +93,7 @@ export class Service {
             return false
         }
     }
-    getFIlePreview(fileId){
+    getFilePreview(fileId){
         return this.bucket.getFilePreview(
             conf.appwriteBucketId, 
             fileId,
@@ -102,5 +102,5 @@ export class Service {
 }
 
 
-const service = new service();
+const service = new Service();
 export default service;
