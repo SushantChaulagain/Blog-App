@@ -67,7 +67,7 @@ export class Service {
             return false
         }
     }
-    //storeage service 
+    //storage service 
 
     async uploadFIle(file){
         try {
